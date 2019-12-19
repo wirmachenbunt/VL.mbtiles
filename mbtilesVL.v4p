@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
-   <PATCH nodename="C:\VL.mbtiles\mbtilesVL.v4p" systemname="mbtilesVL" filename="C:\Users\user\Desktop\mbtilesVL.v4p" scrollx="0" scrolly="2388">
+   <PATCH nodename="C:\VL.mbtiles\mbtilesVL.v4p" systemname="mbtilesVL" filename="C:\Users\user\Desktop\mbtilesVL.v4p" scrollx="840" scrolly="1890">
    <BOUNDS type="Window" left="5244" top="3360" width="13476" height="9000">
    </BOUNDS>
    <PACK Name="addonpack" Version="39.0.0">
@@ -8,12 +8,12 @@
    </PACK>
    <PACK Name="VVVV.Packs.Image" Version="0.2.0">
    </PACK>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="8">
-   <BOUNDS type="Node" left="3738" top="10878" width="100" height="100">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="8">
+   <BOUNDS type="Node" left="3453" top="11883" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3738" top="10878" width="6000" height="4500">
+   <BOUNDS type="Box" left="3453" top="11883" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="360" top="420" width="5652" height="5808">
+   <BOUNDS type="Window" left="-22905" top="-2295" width="20760" height="19665">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -23,7 +23,7 @@
    </PIN>
    <PIN pinname="Projection" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="VSync" slicecount="1" values="1">
+   <PIN pinname="VSync" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="13">
@@ -53,9 +53,9 @@
    <LINK srcnodeid="15" srcpinname="Transform Out" dstnodeid="13" dstpinname="Transform">
    </LINK>
    <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="18">
-   <BOUNDS type="Node" left="2964" top="11391" width="100" height="100">
+   <BOUNDS type="Node" left="1044" top="11391" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2964" top="11391" width="3000" height="3000">
+   <BOUNDS type="Box" left="1044" top="11391" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Layer In" visible="1">
    </PIN>
@@ -71,11 +71,13 @@
    </PIN>
    <PIN pinname="SizeXY" slicecount="2" visible="1" values="0.246,0.246">
    </PIN>
+   <PIN pinname="CenterXY" slicecount="2" values="0,0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="19" srcpinname="XY" dstnodeid="15" dstpinname="TranslateXY">
    </LINK>
    <NODE systemname="Camera (Transform Orbit)" filename="%VVVV%\lib\nugets\VL.EditingFramework.2019.1.0-0959-g3a31ab0c51\vvvv\nodes\modules\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="4089" top="11673" width="100" height="100">
+   <BOUNDS type="Node" left="5334" top="10233" width="100" height="100">
    </BOUNDS>
    <PIN pinname="View" visible="1">
    </PIN>
@@ -84,10 +86,6 @@
    <PIN pinname="Initial Distance" slicecount="1" values="4.64">
    </PIN>
    </NODE>
-   <LINK srcnodeid="21" srcpinname="View" dstnodeid="8" dstpinname="View">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Projection" dstnodeid="8" dstpinname="Projection">
-   </LINK>
    <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="32">
    <BOUNDS type="Node" left="1053" top="4560" width="100" height="100">
    </BOUNDS>
@@ -165,7 +163,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3096" top="7020" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="4,4">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="2045,2045">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -179,8 +177,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="43" srcpinname="Y Output Value" dstnodeid="19" dstpinname="SizeXY">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Layer Out" dstnodeid="8" dstpinname="Layers">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="63">
    <BOUNDS type="Box" left="7656" top="3876" width="795" height="480">
@@ -241,7 +237,7 @@
    </BOUNDS>
    <PIN pinname="Change" visible="1">
    </PIN>
-   <PIN pinname="Period" slicecount="1" values="0.56">
+   <PIN pinname="Period" slicecount="1" values="0.59">
    </PIN>
    <PIN pinname="Pause" visible="1">
    </PIN>
@@ -261,7 +257,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1275" top="2244" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="60">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="99999">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -295,7 +291,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8346" top="2469" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -305,13 +301,13 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="72" srcpinname="Y Output Value" dstnodeid="68" dstpinname="Pause">
    </LINK>
    <NODE systemname="MBTiles (Value)" filename="VVVV.Value.MBTiles.vl" nodename="MBTiles (Value)" componentmode="Hidden" id="82">
-   <BOUNDS type="Node" left="6195" top="5415" width="2148" height="276">
+   <BOUNDS type="Node" left="5250" top="6270" width="2148" height="276">
    </BOUNDS>
    <PIN pinname="Filename" visible="1">
    </PIN>
@@ -362,18 +358,64 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="86">
-   <BOUNDS type="Node" left="4392" top="5424" width="1092" height="240">
+   <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="87">
+   <BOUNDS type="Node" left="1785" top="5670" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4392" top="5424" width="1620" height="348">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|VL inside &gt;&gt;&gt;|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   <PIN pinname="frames per second" visible="1">
    </PIN>
    </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="88">
+   <BOUNDS type="Box" left="1395" top="6405" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1395" top="6405" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="frames per second" dstnodeid="88" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Sampler (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Sampler (DX11)" componentmode="Hidden" id="89">
+   <BOUNDS type="Node" left="7065" top="7770" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7065" top="7770" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Sampler" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="LinearMirror">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="89" srcpinname="Sampler" dstnodeid="13" dstpinname="Sampler State">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="90">
+   <BOUNDS type="Node" left="4410" top="7155" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4410" top="7155" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="512">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="42" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="PixelBillBoard (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="PixelBillBoard (DX11.Layer)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="3105" top="11445" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3105" top="11445" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Double Scale" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Layer Out" dstnodeid="91" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Layer Out" dstnodeid="8" dstpinname="Layers">
+   </LINK>
    </PATCH>
