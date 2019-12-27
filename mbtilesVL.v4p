@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
-   <PATCH nodename="C:\VL.mbtiles\mbtilesVL.v4p" systemname="mbtilesVL" filename="C:\Users\user\Desktop\mbtilesVL.v4p" scrollx="840" scrolly="1890">
-   <BOUNDS type="Window" left="5244" top="3360" width="13476" height="9000">
+   <PATCH nodename="C:\VL.mbtiles\mbtilesVL.v4p" systemname="mbtilesVL" filename="C:\Users\user\Desktop\mbtilesVL.v4p" scrollx="765" scrolly="1455">
+   <BOUNDS type="Window" left="4995" top="5820" width="13470" height="9000">
    </BOUNDS>
    <PACK Name="addonpack" Version="39.0.0">
    </PACK>
@@ -8,12 +8,12 @@
    </PACK>
    <PACK Name="VVVV.Packs.Image" Version="0.2.0">
    </PACK>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="8">
-   <BOUNDS type="Node" left="3453" top="11883" width="100" height="100">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="8">
+   <BOUNDS type="Node" left="3198" top="11778" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3453" top="11883" width="6000" height="4500">
+   <BOUNDS type="Box" left="3198" top="11778" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="-22905" top="-2295" width="20760" height="19665">
+   <BOUNDS type="Window" left="-35280" top="210" width="22350" height="19665">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -91,7 +91,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1053" top="4560" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="16800" top="948" width="6240" height="5076">
+   <BOUNDS type="Window" left="22035" top="2985" width="6240" height="5070">
    </BOUNDS>
    <PIN pinname="Clear" visible="1">
    </PIN>
@@ -257,7 +257,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1275" top="2244" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="99999">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="60">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -291,7 +291,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8346" top="2469" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -301,20 +301,10 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="72" srcpinname="Y Output Value" dstnodeid="68" dstpinname="Pause">
-   </LINK>
-   <NODE systemname="MBTiles (Value)" filename="VVVV.Value.MBTiles.vl" nodename="MBTiles (Value)" componentmode="Hidden" id="82">
-   <BOUNDS type="Node" left="5250" top="6270" width="2148" height="276">
-   </BOUNDS>
-   <PIN pinname="Filename" visible="1">
-   </PIN>
-   <PIN pinname="TileCenterXY" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="82" srcpinname="Output 2" dstnodeid="48" dstpinname="Data">
    </LINK>
    <NODE systemname="SystemFolder (File)" nodename="SystemFolder (File)" componentmode="Hidden" id="83">
    <BOUNDS type="Node" left="5208" top="3996" width="100" height="100">
@@ -340,24 +330,6 @@
    </NODE>
    <LINK srcnodeid="83" srcpinname="Output" dstnodeid="84" dstpinname="Directory">
    </LINK>
-   <LINK srcnodeid="84" srcpinname="Filenames" dstnodeid="82" dstpinname="Filename">
-   </LINK>
-   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="82" dstpinname="TileCenterXY">
-   </LINK>
-   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="85">
-   <BOUNDS type="Node" left="8676" top="4800" width="1764" height="240">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8676" top="4800" width="2688" height="756">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|beware this kills memory&cr;&lf;after a while|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
    <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="87">
    <BOUNDS type="Node" left="1785" top="5670" width="100" height="100">
    </BOUNDS>
@@ -403,9 +375,9 @@
    <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="42" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="PixelBillBoard (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="PixelBillBoard (DX11.Layer)" componentmode="Hidden" id="91">
-   <BOUNDS type="Node" left="3105" top="11445" width="100" height="100">
+   <BOUNDS type="Node" left="3375" top="11280" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3105" top="11445" width="3000" height="3000">
+   <BOUNDS type="Box" left="3375" top="11280" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Layer In" visible="1">
    </PIN>
@@ -417,5 +389,15 @@
    <LINK srcnodeid="40" srcpinname="Layer Out" dstnodeid="91" dstpinname="Layer In">
    </LINK>
    <LINK srcnodeid="91" srcpinname="Layer Out" dstnodeid="8" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="MBTiles (Value)" filename="VVVV.Value.MBTiles.vl" nodename="MBTiles (Value)" componentmode="Hidden" id="94">
+   <BOUNDS type="Node" left="5250" top="6270" width="2148" height="276">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="94" srcpinname="Output 2" dstnodeid="48" dstpinname="Data">
+   </LINK>
+   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="94" dstpinname="TileCenterXY">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Filenames" dstnodeid="94" dstpinname="Filename">
    </LINK>
    </PATCH>
