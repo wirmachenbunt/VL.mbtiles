@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
-   <PATCH nodename="C:\VL.mbtiles\mbtilesVL.v4p" systemname="mbtilesVL" filename="C:\Users\user\Desktop\mbtilesVL.v4p" scrollx="384" scrolly="564">
-   <BOUNDS type="Window" left="4995" top="5820" width="13470" height="9000">
+   <PATCH nodename="C:\VL.mbtiles\mbtilesVL.v4p" systemname="mbtilesVL" filename="C:\Users\user\Desktop\mbtilesVL.v4p" scrollx="384" scrolly="426">
+   <BOUNDS type="Window" left="1236" top="1908" width="13464" height="9000">
    </BOUNDS>
    <PACK Name="addonpack" Version="39.0.0">
    </PACK>
@@ -13,7 +13,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3198" top="11778" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="1248" top="840" width="7956" height="7428">
+   <BOUNDS type="Window" left="14592" top="1008" width="7956" height="7428">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
