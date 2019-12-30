@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
-   <PATCH nodename="C:\VL.mbtiles\mbtilesVL.v4p" systemname="mbtilesVL" filename="C:\Users\user\Desktop\mbtilesVL.v4p" scrollx="765" scrolly="1455">
-   <BOUNDS type="Window" left="15855" top="4605" width="13470" height="9000">
+   <PATCH nodename="C:\VL.mbtiles\mbtilesVL.v4p" systemname="mbtilesVL" filename="C:\Users\user\Desktop\mbtilesVL.v4p" scrollx="384" scrolly="426">
+   <BOUNDS type="Window" left="1236" top="1908" width="13464" height="9000">
    </BOUNDS>
    <PACK Name="addonpack" Version="39.0.0">
    </PACK>
@@ -13,7 +13,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3198" top="11778" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="-35280" top="210" width="22350" height="19665">
+   <BOUNDS type="Window" left="14592" top="1008" width="7956" height="7428">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -272,18 +272,6 @@
    </LINK>
    <LINK srcnodeid="69" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum Background FPS">
    </LINK>
-   <NODE id="48" systemname="UploadImage (DX11.Texture Async)" filename="%VVVV%\lib\nugets\VL.VVVV.DirectX11.2019.1.0-0959-g3a31ab0c51\vvvv\nodes\plugins\VL.VVVV.DirectX11.dll" nodename="UploadImage (DX11.Texture Async)" componentmode="Hidden">
-   <BOUNDS type="Node" left="5259" top="8673" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="5259" top="8673" width="2400" height="2400">
-   </BOUNDS>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Data" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="48" srcpinname="Texture Out" dstnodeid="13" dstpinname="Texture">
-   </LINK>
    <LINK srcnodeid="64" srcpinname="XY" dstnodeid="65" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="72">
@@ -291,7 +279,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8346" top="2469" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -301,7 +289,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="72" srcpinname="Y Output Value" dstnodeid="68" dstpinname="Pause">
@@ -393,11 +381,117 @@
    <NODE systemname="MBTiles (Value)" filename="VVVV.Value.MBTiles.vl" nodename="MBTiles (Value)" componentmode="Hidden" id="94">
    <BOUNDS type="Node" left="5250" top="6270" width="2148" height="276">
    </BOUNDS>
+   <PIN pinname="out" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="94" srcpinname="Output 2" dstnodeid="48" dstpinname="Data">
-   </LINK>
    <LINK srcnodeid="65" srcpinname="Output" dstnodeid="94" dstpinname="TileCenterXY">
    </LINK>
    <LINK srcnodeid="84" srcpinname="Filenames" dstnodeid="94" dstpinname="Filename">
+   </LINK>
+   <NODE id="95" systemname="UploadImage (DX11.Texture Async)" filename="%VVVV%\lib\nugets\VL.VVVV.DirectX11.2019.1.0-0959-g3a31ab0c51\vvvv\nodes\plugins\VL.VVVV.DirectX11.dll" nodename="UploadImage (DX11.Texture Async)" componentmode="Hidden">
+   <BOUNDS type="Node" left="5259" top="8673" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5259" top="8673" width="2400" height="2400">
+   </BOUNDS>
+   <PIN pinname="Data" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="95" srcpinname="Texture Out" dstnodeid="13" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="Info (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Info (DX11.Texture 2d)" componentmode="Hidden" id="96">
+   <BOUNDS type="Node" left="7728" top="8640" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7728" top="8640" width="2400" height="2400">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="95" srcpinname="Texture Out" dstnodeid="96" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Multiply (Value Spectral Vector)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Multiply (Value Spectral Vector)" componentmode="Hidden" id="97">
+   <BOUNDS type="Node" left="8076" top="7944" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8076" top="7944" width="2400" height="2400">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="94" srcpinname="Output 2" dstnodeid="95" dstpinname="Data">
+   </LINK>
+   <NODE systemname="LatlongToTile (Value)" filename="..\Maps_vvvv\Research\mbtilesReader\plugins\ValueLatlongToTile\ValueLatlongToTile.csproj" nodename="LatlongToTile (Value)" componentmode="Hidden" id="98">
+   <BOUNDS type="Node" left="4164" top="2076" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4164" top="2076" width="2400" height="2400">
+   </BOUNDS>
+   <PIN pinname="Lat/LonXY" visible="1">
+   </PIN>
+   <PIN pinname="Zoom" slicecount="1" visible="1" values="12">
+   </PIN>
+   <PIN pinname="TilesXY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="99">
+   <BOUNDS type="Box" left="2568" top="852" width="792" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2568" top="852" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="46.2,6.17">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="100">
+   <BOUNDS type="Box" left="3660" top="2796" width="792" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3660" top="2796" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="98" srcpinname="TilesXY" dstnodeid="100" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Reverse (Spreads)" nodename="Reverse (Spreads)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="4260" top="1464" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="99" srcpinname="Y Output Value" dstnodeid="101" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output" dstnodeid="98" dstpinname="Lat/LonXY">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="102">
+   <BOUNDS type="Box" left="5820" top="1440" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5820" top="1440" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="12">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Zoom">
    </LINK>
    </PATCH>
