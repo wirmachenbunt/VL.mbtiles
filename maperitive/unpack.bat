@@ -1,0 +1,1 @@
+osmconvert64-0.8.8p.exe monaco-latest.osm.pbf -o=monaco.osm

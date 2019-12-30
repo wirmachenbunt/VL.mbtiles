@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
-   <PATCH nodename="C:\VL.mbtiles\mbtilesVL.v4p" systemname="mbtilesVL" filename="C:\Users\user\Desktop\mbtilesVL.v4p" scrollx="384" scrolly="426">
+   <PATCH nodename="C:\VL.mbtiles\mbtilesVL.v4p" systemname="mbtilesVL" filename="C:\Users\user\Desktop\mbtilesVL.v4p" scrollx="285" scrolly="2550">
    <BOUNDS type="Window" left="1236" top="1908" width="13464" height="9000">
    </BOUNDS>
    <PACK Name="addonpack" Version="39.0.0">
@@ -13,7 +13,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3198" top="11778" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="14592" top="1008" width="7956" height="7428">
+   <BOUNDS type="Window" left="20355" top="705" width="7950" height="7425">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -41,7 +41,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="2616" top="8745" width="100" height="100">
+   <BOUNDS type="Node" left="2016" top="8580" width="100" height="100">
    </BOUNDS>
    <PIN pinname="TranslateXY" visible="1">
    </PIN>
@@ -63,7 +63,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GridSpread (Spreads 2d)" filename="%VVVV%\lib\nodes\modules\Spreads\GridSpread (Spreads 2d).v4p" nodename="GridSpread (Spreads 2d)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="2811" top="8010" width="100" height="100">
+   <BOUNDS type="Node" left="2211" top="7845" width="100" height="100">
    </BOUNDS>
    <PIN pinname="XY" visible="1">
    </PIN>
@@ -141,9 +141,9 @@
    <LINK srcnodeid="39" srcpinname="Layer" dstnodeid="40" dstpinname="Layer 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="42">
-   <BOUNDS type="Box" left="4146" top="7860" width="795" height="480">
+   <BOUNDS type="Box" left="3546" top="7695" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4146" top="7860" width="0" height="0">
+   <BOUNDS type="Node" left="3546" top="7695" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.98,0.99">
    </PIN>
@@ -159,9 +159,9 @@
    <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="15" dstpinname="ScaleXY">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="43">
-   <BOUNDS type="Box" left="3096" top="7020" width="795" height="480">
+   <BOUNDS type="Box" left="2496" top="6855" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="3096" top="7020" width="0" height="0">
+   <BOUNDS type="Node" left="2496" top="6855" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" visible="1" values="2045,2045">
    </PIN>
@@ -295,7 +295,7 @@
    <LINK srcnodeid="72" srcpinname="Y Output Value" dstnodeid="68" dstpinname="Pause">
    </LINK>
    <NODE systemname="SystemFolder (File)" nodename="SystemFolder (File)" componentmode="Hidden" id="83">
-   <BOUNDS type="Node" left="5208" top="3996" width="100" height="100">
+   <BOUNDS type="Node" left="5358" top="3966" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Do Rescan" slicecount="1" values="0">
    </PIN>
@@ -305,7 +305,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Dir (File)" nodename="Dir (File)" componentmode="Hidden" id="84">
-   <BOUNDS type="Node" left="5040" top="4452" width="100" height="100">
+   <BOUNDS type="Node" left="5235" top="4917" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Directory" visible="1">
    </PIN>
@@ -316,8 +316,6 @@
    <PIN pinname="Filenames" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="84" dstpinname="Directory">
-   </LINK>
    <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="87">
    <BOUNDS type="Node" left="1785" top="5670" width="100" height="100">
    </BOUNDS>
@@ -351,9 +349,9 @@
    <LINK srcnodeid="89" srcpinname="Sampler" dstnodeid="13" dstpinname="Sampler State">
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="90">
-   <BOUNDS type="Node" left="4410" top="7155" width="100" height="100">
+   <BOUNDS type="Node" left="3810" top="6990" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4410" top="7155" width="795" height="240">
+   <BOUNDS type="Box" left="3810" top="6990" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -385,113 +383,39 @@
    </PIN>
    <PIN pinname="Output 2" visible="1">
    </PIN>
+   <PIN pinname="Filename" visible="1" slicecount="1" values="C:\VL.mbtiles\bigdata\map.mbtiles">
+   </PIN>
    </NODE>
    <LINK srcnodeid="65" srcpinname="Output" dstnodeid="94" dstpinname="TileCenterXY">
-   </LINK>
-   <LINK srcnodeid="84" srcpinname="Filenames" dstnodeid="94" dstpinname="Filename">
-   </LINK>
-   <NODE id="95" systemname="UploadImage (DX11.Texture Async)" filename="%VVVV%\lib\nugets\VL.VVVV.DirectX11.2019.1.0-0959-g3a31ab0c51\vvvv\nodes\plugins\VL.VVVV.DirectX11.dll" nodename="UploadImage (DX11.Texture Async)" componentmode="Hidden">
-   <BOUNDS type="Node" left="5259" top="8673" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="5259" top="8673" width="2400" height="2400">
-   </BOUNDS>
-   <PIN pinname="Data" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="95" srcpinname="Texture Out" dstnodeid="13" dstpinname="Texture">
    </LINK>
    <NODE systemname="Info (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Info (DX11.Texture 2d)" componentmode="Hidden" id="96">
    <BOUNDS type="Node" left="7728" top="8640" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="7728" top="8640" width="2400" height="2400">
    </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="95" srcpinname="Texture Out" dstnodeid="96" dstpinname="Texture In">
-   </LINK>
    <NODE systemname="Multiply (Value Spectral Vector)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Multiply (Value Spectral Vector)" componentmode="Hidden" id="97">
    <BOUNDS type="Node" left="8076" top="7944" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="8076" top="7944" width="2400" height="2400">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="94" srcpinname="Output 2" dstnodeid="95" dstpinname="Data">
-   </LINK>
-   <NODE systemname="LatlongToTile (Value)" filename="..\Maps_vvvv\Research\mbtilesReader\plugins\ValueLatlongToTile\ValueLatlongToTile.csproj" nodename="LatlongToTile (Value)" componentmode="Hidden" id="98">
-   <BOUNDS type="Node" left="4164" top="2076" width="100" height="100">
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="98">
+   <BOUNDS type="Node" left="6090" top="4335" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4164" top="2076" width="2400" height="2400">
-   </BOUNDS>
-   <PIN pinname="Lat/LonXY" visible="1">
+   <PIN pinname="Input 2" slicecount="1" values="bigdata\">
    </PIN>
-   <PIN pinname="Zoom" slicecount="1" visible="1" values="12">
-   </PIN>
-   <PIN pinname="TilesXY" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="99">
-   <BOUNDS type="Box" left="2568" top="852" width="792" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2568" top="852" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="46.2,6.17">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="100">
-   <BOUNDS type="Box" left="3660" top="2796" width="792" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3660" top="2796" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="98" srcpinname="TilesXY" dstnodeid="100" dstpinname="Y Input Value">
-   </LINK>
-   <NODE systemname="Reverse (Spreads)" nodename="Reverse (Spreads)" componentmode="Hidden" id="101">
-   <BOUNDS type="Node" left="4260" top="1464" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="99" srcpinname="Y Output Value" dstnodeid="101" dstpinname="Input">
+   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="98" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="101" srcpinname="Output" dstnodeid="98" dstpinname="Lat/LonXY">
+   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="84" dstpinname="Directory">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="102">
-   <BOUNDS type="Box" left="5820" top="1440" width="792" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5820" top="1440" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="12">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="102" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Zoom">
+   <LINK srcnodeid="84" srcpinname="Filenames" dstnodeid="94" dstpinname="Filename">
    </LINK>
    </PATCH>
