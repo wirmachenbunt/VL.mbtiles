@@ -23,7 +23,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2340" top="1530" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="8.39">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="9.07">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -61,7 +61,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5250" top="1680" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="46.88">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="47.02">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -136,7 +136,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Latitude">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="11">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="11">
    <BOUNDS type="Node" left="3900" top="14640" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="3900" top="14640" width="6000" height="4500">
@@ -287,7 +287,7 @@
    </PIN>
    <PIN pinname="TranslateXY" visible="1">
    </PIN>
-   <PIN pinname="ScaleXY" slicecount="1" visible="1" values="0.125">
+   <PIN pinname="ScaleXY" slicecount="1" visible="1" values="0.148">
    </PIN>
    </NODE>
    <LINK srcnodeid="32" srcpinname="Transform Out" dstnodeid="12" dstpinname="Transform">
@@ -333,7 +333,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" values="3">
    </PIN>
    </NODE>
    <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="39">
@@ -507,7 +507,7 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="5" visible="1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="5">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -567,5 +567,21 @@
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="63" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="22" srcpinname="Texture Out" dstnodeid="62" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="66">
+   <BOUNDS type="Node" left="4485" top="6690" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Y Output Value" dstnodeid="66" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="66" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="66" srcpinname="Output" dstnodeid="32" dstpinname="ScaleXY">
    </LINK>
    </PATCH>
